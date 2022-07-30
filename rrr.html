@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="rrrstyle.css">
+</head>
+<body>
+    <div id="app" style="text-align: center;">
+      <h1 class="test">都市のお天気概況</h1>
+      <select v-model="city">
+        <option disabled value="">天気を見たい都市を指定してください</option>
+        <option>Sapporo</option>
+        <option>Tokyo</option>
+        <option>Osaka</option>
+        <option>Fukuoka</option>
+        <option>Okinawa</option>
+     </select>
+  
+      <div class="weather_info">
+
+        <p v-bind:class="{'test': isON}">{{ city }}</p>
+        <p v-bind:class="{'test': isON}">{{ condition.main }}</p>
+        <p v-bind:class="{'test': isON}">{{ temp | roundUp }}°C</p>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
