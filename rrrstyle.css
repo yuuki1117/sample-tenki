@@ -1,9 +1,9 @@
 body {
-    background:blue;
+    background:whitesmoke;
     background-size: cover;
 }
 
 .test{
     font-size: 36px;
-    color:white;
+    color:black;
 }
